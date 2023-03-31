@@ -86,7 +86,7 @@ local clientkeys = gears.table.join(
     -- toggle fullscreen/maximised
     awful.key({ settings.modkey }, 'f', function(c)
         c.fullscreen = not c.fullscreen
-        c.raise()
+        c:raise()
     end),
     awful.key({ settings.modkey }, 'm', function(c)
         c.maximized = not c.maximized
