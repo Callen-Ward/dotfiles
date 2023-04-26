@@ -8,16 +8,21 @@ local settings                 = require('settings')
 beautiful.systray_icon_spacing = 2
 local mysystray                = wibox.widget.systray()
 mysystray.set_base_size(22)
+local mysystraywrapper = {
+    widget = wibox.container.margin,
+    right = 10,
+    mysystray
+}
 
 -- volume widget
-local myvolumewidget = require('awesome-wm-widgets.pactl-widget.volume')
+local myvolumewidget   = require('awesome-wm-widgets.pactl-widget.volume')
     { step = 2, mixer_cmd = settings.terminalcmd .. settings.mixercmd }
 
 -- clock widget
-local mytextclock = wibox.widget.textclock('[%a %d/%m %H:%M]')
+local mytextclock      = wibox.widget.textclock('[%a %d/%m %H:%M]')
 
 -- click handler for the taglist
-local taglist_buttons = gears.table.join(
+local taglist_buttons  = gears.table.join(
     awful.button({}, 1, function(t) t:view_only() end),
     awful.button({ settings.modkey }, 1, function(t)
         if client.focus then
@@ -81,12 +86,16 @@ local function make_wibar(s)
         },
         s.mytasklist,
         {
-            layout = wibox.layout.fixed.horizontal,
-            spacing = 10,
-            mysystray,
-            myvolumewidget,
-            mytextclock,
-            s.mylayoutbox
+            widget = wibox.container.margin,
+            left = 10,
+            {
+                layout = wibox.layout.fixed.horizontal,
+                spacing = 10,
+                mysystraywrapper,
+                myvolumewidget,
+                mytextclock,
+                s.mylayoutbox
+            }
         }
     }
 end
