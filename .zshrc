@@ -53,3 +53,5 @@ export EDITOR='nvim'
 export PF_INFO='ascii title os pkgs shell editor palette'
 path+=("$HOME/.cargo/bin/")
 export PATH
+
+source ~/.zshrc_local
