@@ -29,7 +29,6 @@ setopt hist_ignore_space
 # aliases
 alias ls='ls --color=auto --hyperlink'
 alias la='ls -A'
-alias dotnet='dotnet.exe'
 alias mv='mv -i'
 alias nv='neovide --multigrid'
 alias icat='kitty +kitten icat'
