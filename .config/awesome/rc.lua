@@ -32,7 +32,7 @@ do
 end
 
 -- initialise theme
-beautiful.init(gears.filesystem.get_configuration_dir() .. 'themes/tokyonight-moon.lua')
+beautiful.init(gears.filesystem.get_configuration_dir() .. 'themes/tokyonight-night.lua')
 
 require('modules.notifications')
 
