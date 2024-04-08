@@ -15,8 +15,8 @@ local mysystraywrapper = {
 }
 
 -- volume widget
-local myvolumewidget   = require('awesome-wm-widgets.pactl-widget.volume')
-    { step = 2, mixer_cmd = settings.terminalcmd .. settings.mixercmd }
+local myvolumewidget   = require('awesome-wm-widgets.wpctl-widget.volume')
+    { step = 2, mixer_cmd = settings.terminalcmd .. settings.mixercmd, max_volume = 100 }
 
 -- clock widget
 local mytextclock      = wibox.widget.textclock('[%a %d/%m %H:%M]')
