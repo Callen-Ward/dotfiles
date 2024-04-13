@@ -53,4 +53,5 @@ export PF_INFO='ascii title os wm shell editor palette'
 path+=("$HOME/.cargo/bin/")
 export PATH
 
-source ~/.zshrc_local
+source ~/.zshrc_local 2> /dev/null
+source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" 2> /dev/null
