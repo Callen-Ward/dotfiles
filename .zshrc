@@ -33,6 +33,7 @@ alias mv='mv -i'
 alias nv='neovide --multigrid'
 alias icat='kitty +kitten icat'
 alias gs='git status'
+alias pfetch="PF_INFO='ascii title os shell wm editor palette' pfetch"
 
 # general settings
 unsetopt beep
@@ -49,7 +50,6 @@ setopt prompt_subst
 
 export PS1='[%F{blue}%n%F{white}@%F{cyan}%M %F{red}%1~%F{white}]%F{red}${vcs_info_msg_0_}%F{white}$ '
 export EDITOR='nvim'
-export PF_INFO='ascii title os wm shell editor palette'
 path+=("$HOME/.cargo/bin/")
 export PATH
 
