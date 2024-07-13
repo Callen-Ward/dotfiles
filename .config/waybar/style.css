@@ -1,0 +1,95 @@
+@import "themes/tokyonight.css";
+
+* {
+  all: unset;
+  font-family: "Inter";
+  font-feature-settings: "tnum";
+  font-weight: 600;
+  font-size: 11pt;
+}
+
+window {
+  color: @fg;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background: @bg_dark;
+  padding: 2px 4px;
+  border: 2px solid @border;
+  border-radius: 8px;
+}
+
+.modules-left {
+  margin: 8px 4px 0 8px;
+}
+
+.modules-center {
+  margin: 8px 4px 0;
+}
+
+.modules-right {
+  margin: 8px 8px 0 4px;
+}
+
+#custom-menu,
+#window,
+#clock,
+#tray,
+#wireplumber,
+#workspaces {
+  padding: 3px 6px;
+}
+
+#custom-menu {
+  padding-right: 10px;
+}
+
+#workspaces {
+  padding-left: 7px;
+}
+
+#custom-menu {
+  color: @accent;
+}
+
+window#waybar.empty #window {
+  padding: 0;
+}
+
+#workspaces button {
+  box-shadow: none;
+  padding: 0 4px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.35s cubic-bezier(0.3, 0.9, 0.2, 1.05);
+  color: @fg_dark;
+}
+
+#workspaces button:hover {
+  color: @fg;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.35s cubic-bezier(0.3, 0.9, 0.2, 1.05);
+}
+
+#workspaces button * * {
+  padding-right: 0.5em;
+}
+
+#workspaces button.active {
+  color: @accent;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.35s cubic-bezier(0.3, 0.9, 0.2, 1.05);
+}
+
+#workspaces button.urgent {
+  color: @urgent;
+}
+
+#tray {
+  background: @bg_dark;
+}
+
+label {
+  background: @bg_dark;
+}
