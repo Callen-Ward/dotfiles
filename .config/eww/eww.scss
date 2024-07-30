@@ -1,0 +1,71 @@
+@import "themes/tokyonight.scss";
+
+$gaps-in: 4px;
+$gaps-out: 8px;
+
+* {
+  all: unset;
+  font-family: "Inter";
+  font-feature-settings: "tnum";
+  font-weight: 600;
+  font-size: 11pt;
+  color: $fg;
+}
+
+.widgets-left,
+.widgets-middle,
+.widgets-right {
+  background: $bg_dark;
+  padding: 2px 4px;
+  border: 2px solid $border;
+  border-radius: 8px;
+}
+
+.widgets-left {
+  margin: $gaps-out $gaps-in 0 $gaps-out;
+}
+
+.widgets-middle {
+  margin: $gaps-out $gaps-in 0;
+}
+
+.widgets-right {
+  margin: $gaps-out $gaps-out 0 $gaps-in;
+}
+
+.my-menu,
+.workspaces,
+.volume,
+.my-systray,
+.clock {
+  padding: 3px 6px;
+}
+
+.my-menu label {
+  padding: 0 4px 0 0;
+  color: $accent;
+}
+
+.workspaces button {
+  padding: 0 4px;
+}
+
+.workspaces button label {
+  padding-right: 6px;
+  color: $fg_dark;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.35s cubic-bezier(0.3, 0.9, 0.2, 1.05);
+}
+
+.workspaces button:hover label {
+  color: $fg;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.35s cubic-bezier(0.3, 0.9, 0.2, 1.05);
+}
+
+.workspaces .active label,
+.workspaces .active:hover label {
+  color: $accent;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.35s cubic-bezier(0.3, 0.9, 0.2, 1.05);
+}
