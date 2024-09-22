@@ -1,0 +1,36 @@
+.menu-items.audio {
+  border-color: $border-color;
+  margin: $gaps-out;
+}
+
+.available-devices .menu-subsection .menu-button:hover {
+  label,
+  image {
+    color: $accent-secondary;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.35s cubic-bezier(0.3, 0.9, 0.2, 1.05);
+  }
+}
+
+.available-devices .menu-subsection .menu-button {
+  label,
+  image {
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.35s cubic-bezier(0.3, 0.9, 0.2, 1.05);
+  }
+}
+
+.volume-percent-active {
+  min-width: 3em;
+}
+
+.active-audio-device-box {
+  padding: $gaps-in 0;
+}
+
+.available-devices-active-device {
+  label,
+  image {
+    color: $accent;
+  }
+}

@@ -1,0 +1,52 @@
+.dropdown-menu-container {
+  // TODO: check bar height and set this margin in the typescript code
+  // TODO: apply outer gaps to dropdown menus
+  margin: 3rem 0 0;
+}
+
+.dropdown-menu {
+  background: $bg-dark;
+  padding: $gaps-out;
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
+}
+
+.menu-section {
+  background: $bg;
+  border-radius: $border-radius;
+  margin: $gaps-in 0;
+  padding: $inner-padding;
+}
+
+.menu-section-heading {
+  padding-bottom: $gaps-in;
+  font-weight: bold;
+}
+
+.menu-subsection-divider {
+  min-height: $gaps-out;
+}
+
+.menu-button {
+  padding: $gaps-in 0;
+}
+
+.menu-slider {
+  padding: $gaps-out $gaps-out 0 0;
+  min-width: 200px;
+
+  slider {
+    min-height: 1rem;
+  }
+
+  trough {
+    background: $greyed-out;
+    border-radius: 1rem;
+
+    highlight,
+    progress {
+      background: $fg;
+      border-radius: 1rem;
+    }
+  }
+}

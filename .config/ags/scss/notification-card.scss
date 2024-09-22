@@ -1,0 +1,48 @@
+.notification-card {
+  background-color: $bg-dark;
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
+  margin: 0 0 $gaps-in 0;
+  padding: ($gaps-out - $border-radius / 2) $gaps-out $gaps-out $gaps-out;
+
+  .notification-image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: $border-radius;
+    min-width: 2rem;
+  }
+
+  .notification-icon {
+    font-size: 2rem;
+  }
+
+  .notification-content {
+    margin: 0 ($gaps-in * 2) 0 ($gaps-in * 2);
+
+    .notification-card-header {
+      .notification-card-summary {
+        margin-right: 3rem;
+      }
+    }
+  }
+
+  .notification-actions {
+    margin: ($gaps-in * 2) $gaps-in 0 0;
+
+    button {
+      animation: gradient_f 20s ease-in infinite;
+      transition: all 0.35s cubic-bezier(0.3, 0.9, 0.2, 1.05);
+    }
+
+    button:hover label {
+      color: $accent;
+      animation: gradient_f 20s ease-in infinite;
+      transition: all 0.35s cubic-bezier(0.3, 0.9, 0.2, 1.05);
+    }
+  }
+
+  .notification-close {
+    margin: 0 0 0 $gaps-in;
+  }
+}

@@ -1,0 +1,55 @@
+.bar-widgets-left,
+.bar-widgets-center,
+.bar-widgets-right {
+  background: $bg-dark;
+  padding: $text-padding;
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
+}
+
+.bar-widgets-left {
+  margin: $gaps-out $gaps-in 0 $gaps-out;
+}
+
+.bar-widgets-center {
+  margin: $gaps-out $gaps-in 0;
+}
+
+.bar-widgets-right {
+  margin: $gaps-out $gaps-out 0 $gaps-in;
+}
+
+.bar-widget {
+  padding: 3px 6px;
+}
+
+image {
+  font-size: 1.2rem;
+}
+
+.menu image {
+  color: $accent;
+}
+
+.workspaces button {
+  padding: 0 4px;
+}
+
+.workspaces button image {
+  color: $fg-dark;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.35s cubic-bezier(0.3, 0.9, 0.2, 1.05);
+}
+
+.workspaces button:hover image {
+  color: $fg;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.35s cubic-bezier(0.3, 0.9, 0.2, 1.05);
+}
+
+.workspaces .active image,
+.workspaces .active:hover image {
+  color: $accent;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.35s cubic-bezier(0.3, 0.9, 0.2, 1.05);
+}

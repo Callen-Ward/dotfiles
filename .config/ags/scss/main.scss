@@ -1,0 +1,27 @@
+@import "themes/tokyonight.scss";
+
+$gaps-in: 4px;
+$gaps-out: 8px;
+$border-radius: 8px;
+$border-width: 2px;
+$inner-padding: 14px;
+$text-padding: 2px 4px;
+
+* {
+  all: unset;
+  font-family: "Inter";
+  font-feature-settings: "tnum";
+  font-weight: 600;
+  font-size: 11pt;
+  color: $fg;
+}
+
+@import "bar.scss";
+
+@import "menus/dropdown.scss";
+
+@import "menus/audiomenu.scss";
+
+@import "notification-card.scss";
+
+@import "notifications.scss";
